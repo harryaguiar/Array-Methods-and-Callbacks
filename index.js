@@ -12,6 +12,7 @@ console.log('its working');
 (d) Away Team goals for 2014 world cup final
 (e) Winner of 2014 world cup final */
 
+
 const filterWorldCup2014 = fifaData.filter(
 
     function getFinals(data) {
@@ -20,7 +21,7 @@ const filterWorldCup2014 = fifaData.filter(
         }
     });
     
-    console.log(filterWorldCup2014);
+    console.log("Task 1" , filterWorldCup2014);
 
     // console.log(filterWorldCup2014.data["City"]);
 
@@ -36,8 +37,7 @@ const filterWorldCup2014 = fifaData.filter(
 /* Task 2: Create a function called  getFinals that takes `data` as an argument and returns an array of objects with only finals data */
 
 const finalsData = fifaData.filter(
-
-function getFinals(data) {
+    function getFinals(data) {
     if (data["Stage"] === "Final") {
         return true
     }
@@ -57,15 +57,15 @@ console.log("Task 2:" , finalsData);
 
 /* Task 3: Implement a higher-order function called `getYears` that accepts the callback function `getFinals`, and returns an array called `years` containing all of the years in the dataset */
 
-// const years = {};
+const years = [];
 
-// function getYears(getFinalsCB) {
+function getYears(getFinalsCB) {
 
-//    getFinalsCB.
+   getFinalsCB
 
-// };
+};
 
-// getYears();
+getYears();
 
 /* Task 5: Implement a higher-order function called `getWinners`, that accepts the callback function `getFinals()` and determine the winner (home or away) of each `finals` game. Return the name of all winning countries in an array called `winners` */ 
 
@@ -138,3 +138,4 @@ function badDefense(/* code here */) {
 badDefense();
 
 /* If you still have time, use the space below to work on any stretch goals of your chosing as listed in the README file. */
+
