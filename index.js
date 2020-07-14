@@ -36,12 +36,18 @@ const filterWorldCup2014 = fifaData.filter(
 
 /* Task 2: Create a function called  getFinals that takes `data` as an argument and returns an array of objects with only finals data */
 
-const finalsData = fifaData.filter(
-    function getFinals(data) {
-    if (data["Stage"] === "Final") {
-        return true
-    }
-});
+// const finalsData = fifaData.filter(
+//     function getFinals(data) {
+//     if (data["Stage"] === "Final") {
+//         return true
+//     }
+// });
+
+const data = function getFinals(fifaData) {
+    return fifaData["Stage"] === "Final"
+}
+
+const finalsData = fifaData.filter(data)
 
 console.log("Task 2:" , finalsData);
 
